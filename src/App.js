@@ -2,7 +2,7 @@
 
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link, NavLink } from 'react-router-dom';
-import logo from '../public/octofitapp-small.svg';
+import logo from './octofitapp-small.svg';
 import Activities from './components/Activities';
 import Leaderboard from './components/Leaderboard';
 import Teams from './components/Teams';
