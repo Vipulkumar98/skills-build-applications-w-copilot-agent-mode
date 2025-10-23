@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <div className="container mt-4">
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary mb-4 rounded">
+        <nav className="navbar navbar-expand-lg navbar-dark modern-navbar mb-4 rounded shadow-sm">
           <div className="container-fluid">
             <Link className="navbar-brand fw-bold d-flex align-items-center" to="/">
               <img src={logo} alt="Octofit Logo" className="octofit-logo me-2" />
@@ -31,6 +31,20 @@ function App() {
                 <li className="nav-item"><NavLink className={({isActive}) => 'nav-link' + (isActive ? ' active' : '')} to="/users">Users</NavLink></li>
                 <li className="nav-item"><NavLink className={({isActive}) => 'nav-link' + (isActive ? ' active' : '')} to="/workouts">Workouts</NavLink></li>
               </ul>
+              <div className="d-flex align-items-center">
+                <span className="me-2 text-light fw-semibold">Hi, Guest</span>
+                <div className="dropdown">
+                  <button className="btn btn-outline-light rounded-circle p-0 profile-btn" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile" className="profile-avatar" />
+                  </button>
+                  <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                    <li><button className="dropdown-item" type="button">Profile</button></li>
+                    <li><button className="dropdown-item" type="button">Settings</button></li>
+                    <li><hr className="dropdown-divider" /></li>
+                    <li><button className="dropdown-item" type="button">Logout</button></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </nav>
